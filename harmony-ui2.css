@@ -1,0 +1,2662 @@
+
+/* 
+ * Harmony UI Library - styles.css
+ * 版权所有 © 2024 [滴智科技|digitech]
+ *QQ2273962061
+ * 所有权利保留。
+ * 组件样式以简约风格为主，使用天蓝色调。
+ */
+
+/* 基本重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 按钮样式 */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #1E90FF; /* 天蓝色 */
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1C86EE; /* 深天蓝 */
+}
+
+/* 模态框样式 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* 通知样式 */
+.notification {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.notification-success {
+    background-color: #4CAF50; /* 绿色 */
+}
+
+.notification-error {
+    background-color: #f44336; /* 红色 */
+}
+
+/* 输入框样式 */
+.input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 标签样式 */
+.label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* 下拉菜单样式 */
+.select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #f8f9fa;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    padding: 20px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #e7f1ff; /* 浅蓝色 */
+}
+
+/* 表单样式 */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* 表格样式 */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table th {
+    background-color: #f2f2f2;
+}
+
+/* 加载指示器样式 */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+ 
+/* 轮播图样式 */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel img {
+    width: 100%;
+}
+
+/* 标签页样式 */
+.tab {
+    display: flex;
+    cursor: pointer;
+}
+
+.tab-item {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    background-color: #f1f1f1;
+}
+
+.tab-item.active {
+    background-color: #fff;
+    border-bottom: 2px solid #1E90FF; /* 天蓝色 */
+}
+
+/* 进度条样式 */
+.progress {
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #1E90FF; /* 天蓝色 */
+    width: 0; /* 动态设置宽度 */
+}
+
+/* 面包屑导航样式 */
+.breadcrumb {
+    display: flex;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.breadcrumb-item {
+    margin-right: 10px;
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+    color: #1E90FF; /* 天蓝色 */
+}
+
+.breadcrumb-item.active {
+    color: #333;
+}
+
+/* 卡片样式 */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.card-header {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* 步骤条样式 */
+.steps {
+    display: flex;
+    list-style: none;
+}
+
+.step {
+    flex: 1;
+    position: relative;
+}
+
+.step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+    top: 15px;
+    left: 100%;
+}
+
+/* 头像样式 */
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* 搜索框样式 */
+.search {
+    position: relative;
+    display: flex;
+}
+
+.search input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search button {
+    position: absolute;
+    right: 0;
+    border: none;
+    background-color: #1E90FF; /* 天蓝色 */
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+ 
+/* 标签输入样式 */
+.tag-input {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.tag-input input {
+    border: none;
+    outline: none;
+    flex: 1;
+}
+
+/* 文件上传样式 */
+.file-upload {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.file-upload input[type="file"] {
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* 颜色选择器样式 */
+.color-picker {
+    display: flex;
+    align-items: center;
+}
+
+.color-picker input {
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+/* 树形控件样式 */
+.tree {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.tree li {
+    margin: 5px 0;
+}
+
+/* 自定义滚动条样式 */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1E90FF; /* 天蓝色 */
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* 侧边栏折叠样式 */
+.sidebar.collapsed {
+    width: 60px;
+}
+
+.sidebar.collapsed a {
+    text-align: center;
+}
+
+/* 状态指示器样式 */
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.status-online {
+    background-color: #4CAF50; /* 绿色 */
+}
+
+.status-offline {
+    background-color: #f44336; /* 红色 */
+}
+
+.status-away {
+    background-color: #FFA500; /* 橙色 */
+}
+
+/* 动态加载内容样式 */
+.loading-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.loading-content .loader {
+    margin-right: 10px;
+}
+
+
+
+
+
+ 
+/* 评论区样式 */
+.comment-section {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.comment {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+/* 音频/视频播放器样式 */
+.player {
+    width: 100%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.player audio, .player video {
+    width: 100%;
+}
+
+/* 地图组件样式 */
+.map {
+    width: 100%;
+    height: 400px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* 选项卡样式 */
+.tab-content {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: -1px; /* 避免重叠 */
+}
+
+/* 轮播图导航样式 */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.carousel-nav button {
+    background-color: #1E90FF; /* 天蓝色 */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+/* 进度条样式 */
+.progress-container {
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.progress-bar {
+    background-color: #1E90FF; /* 天蓝色 */
+    height: 100%;
+    width: 0; /* 动态设置宽度 */
+}
+
+/* 面板样式 */
+.panel {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 15px;
+}
+
+/* 特色标签样式 */
+.feature-label {
+    background-color: #1E90FF; /* 天蓝色 */
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* 动态内容加载样式 */
+.dynamic-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+
+
+
+
+ 
+/* 手风琴样式 */
+.accordion {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+}
+
+.accordion-header:hover {
+    background-color: #e7e7e7;
+}
+
+.accordion-content {
+    padding: 10px;
+    display: none; /* 默认隐藏 */
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+    }
+    
+    .sidebar.collapsed {
+        width: 50px;
+    }
+
+    .tab {
+        flex-direction: column;
+    }
+
+    .tab-item {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* 自定义按钮样式 */
+.btn-custom {
+    padding: 10px 20px;
+    background-color: #ff9800; /* 橙色 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-custom:hover {
+    background-color: #fb8c00; /* 深橙色 */
+}
+
+/* 轮播图样式 */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel img {
+    width: 100%;
+}
+
+/* 下拉选择样式 */
+.select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+/* 进度条样式 */
+.progress {
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #1E90FF; /* 天蓝色 */
+    width: 0; /* 动态设置宽度 */
+}
+
+/* 状态指示器 */
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.status-online {
+    background-color: #4CAF50; /* 绿色 */
+}
+
+.status-offline {
+    background-color: #f44336; /* 红色 */
+}
+
+.status-away {
+    background-color: #FFA500; /* 橙色 */
+}
+/* 标签样式 */
+.tag {
+    display: inline-block;
+    background-color: #1E90FF; /* 天蓝色 */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin: 5px;
+}
+
+/* 图片库样式 */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.image-gallery img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* 滚动区域样式 */
+.scrollable {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* 标签页样式 */
+.tab {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tab-item.active {
+    border-bottom: 2px solid #1E90FF; /* 天蓝色 */
+    font-weight: bold;
+}
+
+/* 代码块样式 */
+.code-block {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    overflow-x: auto;
+}
+
+/* 页脚样式 */
+.footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+/* 菜单样式 */
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: #e7f1ff; /* 浅蓝色 */
+}
+
+/* 轮播控制按钮样式 */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* 轮播控制左 */
+.carousel-control.left {
+    left: 10px;
+}
+
+/* 轮播控制右 */
+.carousel-control.right {
+    right: 10px;
+}
+
+/* 悬浮提示样式 */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* 上方 */
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 表格样式 */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table th {
+    background-color: #f1f1f1;
+}
+
+/* 手风琴样式 */
+.accordion {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.accordion-header {
+    padding: 10px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.accordion-content {
+    padding: 10px;
+    display: none; /* 默认隐藏 */
+}
+
+/* 颜色选择器样式 */
+.color-picker {
+    display: flex;
+    align-items: center;
+}
+
+.color-picker input {
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+/* 自定义输入框样式 */
+.input-custom {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+/* 弹出框样式 */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* 默认隐藏 */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    width: 400px;
+}
+
+/* 日期选择器样式 */
+.date-picker {
+    position: relative;
+}
+
+.date-picker input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* 提示框样式 */
+.alert {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+.alert-error {
+    background-color: #f2dede;
+    color: #a94442;
+}
+
+/* 文件列表样式 */
+.file-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.file-list-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 动态加载指示器 */
+.loading-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-indicator .spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #1E90FF; /* 天蓝色 */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+/* 动画效果 */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 快捷方式样式 */
+.shortcut {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 5px;
+}
+
+/* 自定义选择框样式 */
+.checkbox-custom {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-custom input {
+    margin-right: 5px;
+}
+
+/* 卡片样式 */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    width: 250px;
+    background-color: #f9f9f9;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+}
+
+/* 浮动按钮样式 */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1E90FF; /* 天蓝色 */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 悬浮状态 */
+.floating-button:hover {
+    background-color: #1a8bc4; /* 深天蓝色 */
+}
+
+/* 样式清理 */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+
+
+ 
+/* 自定义表单样式 */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* 列表样式 */
+.list-group {
+    list-style: none;
+    padding: 0;
+}
+
+.list-group-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+/* 标签页样式 */
+.tab-container {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.tab-title {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tab-title.active {
+    background-color: #1E90FF; /* 天蓝色 */
+    color: white;
+}
+
+/* 上传进度条样式 */
+.upload-progress {
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.upload-progress .progress-bar {
+    background-color: #1E90FF; /* 天蓝色 */
+    height: 100%;
+    width: 0; /* 动态设置宽度 */
+}
+
+/* 媒体查询样式 */
+@media (max-width: 576px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+    }
+
+    .sidebar.collapsed {
+        width: 50px;
+    }
+
+    .card {
+        margin: 5px 0;
+    }
+}
+
+/* 评分组件样式 */
+.rating {
+    display: flex;
+}
+
+.rating input {
+    display: none; /* 隐藏原始输入 */
+}
+
+.rating label {
+    cursor: pointer;
+    font-size: 20px;
+    color: #ccc; /* 灰色 */
+}
+
+.rating input:checked ~ label {
+    color: #1E90FF; /* 天蓝色 */
+}
+
+/* 标签选择器样式 */
+.tag-selector {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.tag-selector .tag {
+    margin: 5px;
+}
+
+/* 确认框样式 */
+.confirmation-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 文件输入样式 */
+.file-input {
+    display: flex;
+    align-items: center;
+}
+
+.file-input input {
+    padding: 5px;
+}
+
+/* 单选框样式 */
+.radio-group {
+    display: flex;
+    align-items: center;
+}
+
+.radio-group input {
+    margin-right: 5px;
+}
+
+/* 进度条标签样式 */
+.progress-label {
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+
+
+
+ 
+/* 自定义下拉菜单样式 */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* 进度指示器样式 */
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.step {
+    position: relative;
+    flex: 1;
+    text-align: center;
+}
+
+.step::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 100%;
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+}
+
+.step:last-child::after {
+    display: none;
+}
+
+/* 自定义标签选择样式 */
+.label-select {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.label-select .label {
+    background-color: #1E90FF; /* 天蓝色 */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin: 5px;
+}
+
+/* 加载动画样式 */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.loading .spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #1E90FF; /* 天蓝色 */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+/* 切换开关样式 */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: #1E90FF; /* 天蓝色 */
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(26px);
+}
+
+/* 自定义搜索框样式 */
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    flex: 1;
+}
+
+/* 卡片翻转样式 */
+.card-flip {
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card-flip:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+/* 自定义按钮样式 */
+.button {
+    background-color: #1E90FF; /* 天蓝色 */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #1a8bc4; /* 深天蓝色 */
+}
+
+/* 通知样式 */
+.notification {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.notification-icon {
+    margin-right: 10px;
+}
+
+/* 自定义切换按钮样式 */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.switch-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .switch-slider {
+    background-color: #1E90FF; /* 天蓝色 */
+}
+
+input:checked + .switch-slider:before {
+    transform: translateX(26px);
+}
+
+/* 美化表单样式 */
+.form {
+    background-color: #fefefe;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 美化卡片样式 */
+.card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 美化工具提示 */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 美化导航栏样式 */
+.navbar {
+    background-color: #1E90FF; /* 天蓝色 */
+    padding: 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-link {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #ffd700; /* 金色 */
+}
+
+/* 美化分页样式 */
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination a {
+    padding: 10px 15px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #1E90FF; /* 天蓝色 */
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #1E90FF; /* 天蓝色 */
+    color: white;
+}
+
+/* 美化警告框 */
+.alert {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.alert-warning {
+    background-color: #ffeeba;
+    color: #856404;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+/* 自定义面包屑导航样式 */
+.breadcrumb {
+    padding: 10px 0;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.breadcrumb a {
+    color: #007bff; /* 蓝色 */
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* 自定义图标样式 */
+.icon {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+/* 自定义饼图样式 */
+.pie-chart {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.pie-chart .slice {
+    position: absolute;
+    border-radius: 50%;
+}
+
+/* 自定义进度条样式 */
+.progress {
+    background-color: #e9ecef;
+    border-radius: 5px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #1E90FF; /* 天蓝色 */
+    height: 100%;
+    transition: width 0.4s;
+}
+
+/* 自定义分隔符样式 */
+.divider {
+    border-bottom: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* 自定义日期选择器样式 */
+.date-picker {
+    display: flex;
+    align-items: center;
+}
+
+.date-picker input {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+/* 自定义日历样式 */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-day {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* 自定义滑块样式 */
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+.slider:hover {
+    background: #1E90FF; /* 天蓝色 */
+}
+
+/* 自定义对话框样式 */
+.dialog {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    position: relative;
+}
+
+/* 自定义图像画廊样式 */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image-gallery img {
+    border-radius: 5px;
+    width: calc(33.333% - 10px);
+    object-fit: cover;
+}
+
+/* 自定义底部样式 */
+.footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* 自定义手风琴样式 */
+.accordion {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+    background-color: #e9ecef;
+}
+
+/* 自定义折叠内容样式 */
+.accordion-content {
+    padding: 10px;
+    display: none; /* 默认隐藏 */
+}
+
+/* 自定义表格样式 */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #1E90FF; /* 天蓝色 */
+    color: white;
+}
+/* 自定义标签样式 */
+.tag {
+    display: inline-block;
+    background-color: #1E90FF; /* 天蓝色 */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+/* 自定义输入框样式 */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.input-field:focus {
+    border-color: #1E90FF; /* 天蓝色 */
+}
+
+/* 自定义轮播图样式 */
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: none; /* 默认隐藏 */
+}
+
+.carousel-slide.active {
+    display: block; /* 显示当前活动的幻灯片 */
+}
+
+/* 自定义工具栏样式 */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 自定义快捷按钮样式 */
+.quick-button {
+    background-color: #28a745; /* 绿色 */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quick-button:hover {
+    background-color: #218838; /* 深绿色 */
+}
+
+/* 自定义提示框样式 */
+.tooltip-message {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 12px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-message {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 自定义横幅样式 */
+.banner {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* 自定义搜索结果样式 */
+.search-result {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+/* 自定义日历事件样式 */
+.calendar-event {
+    background-color: #ffcc00; /* 黄色 */
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+/* 自定义图片上传样式 */
+.image-upload {
+    border: 2px dashed #1E90FF; /* 天蓝色 */
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* 自定义消息框样式 */
+.message-box {
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3; /* 蓝色 */
+    padding: 10px;
+    margin: 20px 0;
+}
+
+/* 自定义卡片标题样式 */
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 自定义标签页内容样式 */
+.tab-content {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+
+
+
+
+ 
+/* 自定义进阶表单样式 */
+.advanced-form {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 自定义分步表单样式 */
+.step-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.step-form .step {
+    display: none; /* 默认隐藏 */
+}
+
+.step-form .step.active {
+    display: block; /* 显示当前步骤 */
+}
+
+/* 自定义折叠面板样式 */
+.collapse-panel {
+    margin: 10px 0;
+}
+
+.collapse-header {
+    background-color: #e9ecef;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.collapse-header:hover {
+    background-color: #d6d8db;
+}
+
+/* 自定义卡片图标样式 */
+.card-icon {
+    font-size: 30px;
+    color: #1E90FF; /* 天蓝色 */
+    margin-bottom: 10px;
+}
+
+/* 自定义选项卡样式 */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab-item:hover {
+    background-color: #f1f1f1;
+}
+
+.tab-item.active {
+    border-bottom: 2px solid #1E90FF; /* 天蓝色 */
+    font-weight: bold;
+}
+
+/* 自定义数据表格样式 */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th {
+    background-color: #1E90FF; /* 天蓝色 */
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.data-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* 自定义提示信息样式 */
+.alert-message {
+    background-color: #fff3cd; /* 浅黄色 */
+    color: #856404; /* 深黄色 */
+    border: 1px solid #ffeeba;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* 自定义搜索框图标样式 */
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ccc;
+}
+
+/* 自定义效果样式 */
+.effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.effect:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.effect:hover:before {
+    opacity: 1;
+}
+
+/* 自定义多选框样式 */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox {
+    margin: 5px 0;
+}
+
+/* 自定义步骤条样式 */
+.step-bar {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.step-bar .step {
+    position: relative;
+    flex: 1;
+    text-align: center;
+}
+
+.step-bar .step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+}
+
+/* 自定义空状态样式 */
+.empty-state {
+    text-align: center;
+    padding: 20px;
+    color: #999;
+}
+
+
+
+
+
+ 
+/* 自定义进阶按钮样式 */
+.advanced-button {
+    background-color: #28a745; /* 绿色 */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.advanced-button:hover {
+    background-color: #218838; /* 深绿色 */
+}
+
+/* 自定义环形进度条样式 */
+.circular-progress {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    background: conic-gradient(#1E90FF 0%, #ddd 0%);
+}
+
+.circular-progress .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #1E90FF; /* 天蓝色 */
+}
+
+/* 自定义消息气泡样式 */
+.message-bubble {
+    display: inline-block;
+    background-color: #e0f7fa; /* 浅蓝色 */
+    border-radius: 20px;
+    padding: 10px 15px;
+    max-width: 75%;
+    margin: 5px 0;
+}
+
+/* 自定义评分星星样式 */
+.rating {
+    display: flex;
+}
+
+.rating .star {
+    font-size: 20px;
+    color: #ffd700; /* 金色 */
+    cursor: pointer;
+}
+
+/* 自定义标签页导航样式 */
+.tab-nav {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab-nav .tab-link {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab-nav .tab-link:hover {
+    background-color: #f1f1f1;
+}
+
+.tab-nav .tab-link.active {
+    border-bottom: 2px solid #1E90FF; /* 天蓝色 */
+    font-weight: bold;
+}
+
+/* 自定义表单组样式 */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* 自定义卡片体样式 */
+.card-body {
+    padding: 15px;
+}
+
+/* 自定义卡片底部样式 */
+.card-footer {
+    padding: 10px;
+    text-align: right;
+}
+
+/* 自定义任务列表样式 */
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list .task-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 自定义行为按钮样式 */
+.action-button {
+    background-color: #17a2b8; /* 青色 */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-button:hover {
+    background-color: #138496; /* 深青色 */
+}
+
+/* 自定义加载动画样式 */
+.loader {
+    border: 4px solid #f3f3f3; /* 轻灰色 */
+    border-top: 4px solid #1E90FF; /* 天蓝色 */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 自定义卡片图像样式 */
+.card-image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* 自定义内容加载占位符样式 */
+.placeholder {
+    background-color: #e0e0e0; /* 浅灰色 */
+    border-radius: 5px;
+    height: 20px;
+    margin: 10px 0;
+}
+
+
+
+
+
+ 
+/* 自定义颜色选择器样式 */
+.color-picker {
+    display: flex;
+    align-items: center;
+}
+
+.color-picker input {
+    width: 50px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+/* 自定义标签选择样式 */
+.tag-selector {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.tag-selector .tag {
+    background-color: #e0e0e0; /* 浅灰色 */
+    color: #333;
+    border-radius: 12px;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* 自定义弹出菜单样式 */
+.dropdown-menu {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none; /* 默认隐藏 */
+}
+
+.dropdown-menu.active {
+    display: block; /* 显示菜单 */
+}
+
+/* 自定义搜索框样式 */
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 5px;
+}
+
+/* 自定义页面导航样式 */
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.page-navigation .page-link {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #1E90FF; /* 天蓝色 */
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.page-navigation .page-link:hover {
+    background-color: #f1f1f1;
+}
+
+/* 自定义日历样式 */
+.calendar-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.calendar-day {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* 自定义通知样式 */
+.notification {
+    background-color: #d1ecf1; /* 浅蓝色 */
+    border: 1px solid #bee5eb; /* 浅蓝色边框 */
+    color: #0c5460; /* 深蓝色文字 */
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* 自定义过滤器样式 */
+.filter-group {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.filter-group label {
+    margin-right: 10px;
+}
+
+/* 自定义图像轮播样式 */
+.image-carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-carousel img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* 自定义二维码样式 */
+.qr-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* 自定义主题切换器样式 */
+.theme-switcher {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switcher label {
+    margin-right: 10px;
+}
+
+/* 自定义提醒框样式 */
+.reminder-box {
+    background-color: #fff3cd; /* 浅黄色 */
+    border: 1px solid #ffeeba; /* 浅黄色边框 */
+    color: #856404; /* 深黄色文字 */
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+/* 自定义反馈表单样式 */
+.feedback-form {
+    background-color: #f8f9fa; /* 浅灰色 */
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 自定义进度条样式 */
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 10px;
+    background-color: #1E90FF; /* 天蓝色 */
+    width: 0; /* 动态调整 */
+}
+
+/* 自定义时间选择器样式 */
+.time-picker {
+    display: flex;
+    align-items: center;
+}
+
+.time-picker input {
+    width: 80px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+/* 自定义全屏按钮样式 */
+.fullscreen-button {
+    background-color: #007bff; /* 蓝色 */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.fullscreen-button:hover {
+    background-color: #0056b3; /* 深蓝色 */
+}
+
+/* 自定义标签选择框样式 */
+.tag-input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag-input .tag {
+    background-color: #1E90FF; /* 天蓝色 */
+    color: white;
+    border-radius: 12px;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+/* 自定义筛选框样式 */
+.filter-box {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* 自定义快捷菜单样式 */
+.shortcut-menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.shortcut-menu .shortcut {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    flex: 1;
+    margin: 0 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.shortcut-menu .shortcut:hover {
+    background-color: #f1f1f1;
+}
+
+/* 自定义弹出框样式 */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* 默认隐藏 */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex; /* 显示弹出框 */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+}
+
+/* 自定义面板样式 */
+.panel {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/* 自定义面板头样式 */
+.panel-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 自定义面板体样式 */
+.panel-body {
+    padding: 10px;
+}
+
+/* 自定义通知列表样式 */
+.notification-list {
+    list-style: none;
+    padding: 0;
+}
+
+.notification-list .notification-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+}
+
+.notification-list .notification-item:last-child {
+    border-bottom: none;
+}
+
+/* 自定义切换按钮样式 */
+.toggle-button {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-button input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #1E90FF; /* 天蓝色 */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+/* 自定义表单验证样式 */
+.input-error {
+    border: 1px solid red;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* 自定义标签样式 */
+.label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* 自定义筛选面板样式 */
+.filter-panel {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 自定义提示框样式 */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* 上方 */
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 自定义文件上传样式 */
+.file-upload {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.file-upload input[type="file"] {
+    display: none;
+}
+
+.file-upload label {
+    background-color: #1E90FF; /* 天蓝色 */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.file-upload label:hover {
+    background-color: #0056b3; /* 深蓝色 */
+}
+
+/* 自定义卡片样式 */
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+}
+
+/* 自定义轮播图样式 */
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    width: 100%;
+}
+
+.carousel-item.active {
+    display: block; /* 显示活动项 */
+}
+
+/* 自定义多选框样式 */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-group label {
+    margin-bottom: 5px;
+}
+
+/* 自定义单选框样式 */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-group label {
+    margin-bottom: 5px;
+}
+
+/* 自定义标签输入框样式 */
+.tag-input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px 0;
+}
+
+.tag-input .tag {
+    background-color: #1E90FF; /* 天蓝色 */
+    color: white;
+    border-radius: 12px;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+/* 自定义地图样式 */
+.map-container {
+    width: 100%;
+    height: 400px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* 自定义视频播放器样式 */
+.video-player {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* 自定义进度指示器样式 */
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.step-indicator .step {
+    position: relative;
+    padding: 10px;
+}
+
+.step-indicator .step.active {
+    font-weight: bold;
+    color: #1E90FF; /* 天蓝色 */
+}
+
+/* 自定义二级菜单样式 */
+.sub-menu {
+    display: none; /* 默认隐藏 */
+    margin-left: 20px;
+}
+
+.sub-menu.active {
+    display: block; /* 显示二级菜单 */
+}
+
+/* 自定义图标样式 */
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* 自定义闪烁效果样式 */
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+
