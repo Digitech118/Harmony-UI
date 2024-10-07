@@ -1,7 +1,6 @@
-
 # Harmony UI
 
-![Harmony UI Logo](http://ser439414051599.xg.gptapp.ren/Harmony-UI/logo.png)
+![Harmony UI Logo](https://camo.githubusercontent.com/bc1d1f38be413484723941bdfaf389f086dd3301280abc1dfb8c247b370a60ca/687474703a2f2f7365723433393431343035313539392e78672e6770746170702e72656e2f4861726d6f6e792d55492f6c6f676f2e706e67)
 
 Harmony UI 是一个简约且美观的前端组件库，旨在为开发者提供高效的界面构建工具。它使用天蓝色主题，提供丰富的 UI 组件，适用于各类应用程序的界面设计。
 
@@ -55,13 +54,13 @@ Harmony UI 提供了多种预定义样式，以满足不同的设计需求。例
 
 ```css
 .btn {
-       background-color: #1E90FF; /* 修改按钮颜色 */
+        background-color: #1E90FF; /* 修改按钮颜色 */
 }
 ```
 
 ## 贡献
 
-欢迎您为 Harmony UI 贡献代码或提交建议！请通过 [GitHub](#) 提交您的请求。
+欢迎您为 Harmony UI 贡献代码或提交建议！请通过 [GitHub](https://github.com/Digitech118/Harmony-UI) 提交您的请求。
 
 ## 许可证
 
